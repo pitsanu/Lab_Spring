@@ -18,6 +18,8 @@ namespace IocMovieFinder
             set { _movieFinder = value; }
         }
 
+        public string FinderName { get { return _movieFinder.Name; } }
+
         public Movie[] MoviesDirectedBy(string director)
         {
             IList allMovies = _movieFinder.FindAll();

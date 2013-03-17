@@ -4,17 +4,28 @@ using System.Linq;
 using System.Text;
 using Spring.Context;
 using Spring.Context.Support;
+using Common.Logging;
+using log4net.Config;
 
 namespace IocMovieFinder
 {
     class Program
     {
+        private static readonly ILog LOG = LogManager.GetLogger(typeof(Program));
+
         static void Main(string[] args)
         {
+            XmlConfigurator.Configure();
+
             try
             {
                 IApplicationContext ctx = ContextRegistry.GetContext();
                 MovieLister lister = (MovieLister)ctx.GetObject("MyMovieLister");
+                IMovieFinder finder = (IMovieFinder)ctx.GetObject("AnotherMovieFinder");
+
+
+                Console.WriteLine(string.Format("Finder: {0}", lister.FinderName));
+
                 Movie[] movies = lister.MoviesDirectedBy("Roberto Benigni");
                 Console.WriteLine("\nSearching for movie...\n");
                 foreach (Movie movie in movies)

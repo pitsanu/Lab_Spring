@@ -12,5 +12,10 @@ namespace IocMovieFinder
         {
             return new ArrayList();
         }
+
+        public string Name
+        {
+            get { return "SimpleMovieFinder"; }
+        }
     }
 }

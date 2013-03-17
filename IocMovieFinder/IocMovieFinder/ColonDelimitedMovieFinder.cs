@@ -9,6 +9,7 @@ namespace IocMovieFinder
 {
     class ColonDelimitedMovieFinder:IMovieFinder
     {
+
         public ColonDelimitedMovieFinder(FileInfo file)
         {
             MovieFile = file;
@@ -23,6 +24,11 @@ namespace IocMovieFinder
         {
             get;
             set;
+        }
+
+        public string Name
+        {
+            get { return "ColonDelimitedMovieFinder"; }
         }
     }
 }

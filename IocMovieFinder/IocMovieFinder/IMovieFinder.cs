@@ -8,6 +8,7 @@ namespace IocMovieFinder
 {
     interface IMovieFinder
     {
+        string Name { get; }
         IList FindAll();
     }
 }
