@@ -53,6 +53,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\Common.Logging.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+=======
+    <Reference Include="Common.Logging.Log4Net">
+      <HintPath>..\Libs\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+>>>>>>> caf2e4d11c37515c3dfc4de5899aed69b92f9def
     <Reference Include="log4net">
       <HintPath>..\Libs\log4net.dll</HintPath>
     </Reference>

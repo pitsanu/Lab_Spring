@@ -20,11 +20,15 @@ namespace IocMovieFinder
             try
             {
                 IApplicationContext ctx = ContextRegistry.GetContext();
+<<<<<<< HEAD
                 MovieLister lister = (MovieLister)ctx.GetObject("MyMovieLister");
                 IMovieFinder finder = (IMovieFinder)ctx.GetObject("AnotherMovieFinder");
 
 
                 Console.WriteLine(string.Format("Finder: {0}", lister.FinderName));
+=======
+                MovieLister lister = (MovieLister)ctx.GetObject("MyMovieLister");            
+>>>>>>> caf2e4d11c37515c3dfc4de5899aed69b92f9def
 
                 Movie[] movies = lister.MoviesDirectedBy("Roberto Benigni");
                 Console.WriteLine("\nSearching for movie...\n");
